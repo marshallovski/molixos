@@ -11,7 +11,7 @@
 <p>Find contributors</p>
 <h3>Screenshots</h3>
 <p>(all screenshots captured at Firefox 95 in Windows 8.1)</p>
-![2022-03-0911-26-00](https://user-images.githubusercontent.com/68496774/157412592-a1f67b83-a21d-46bb-b890-2f5b22013135.png)
-![изображение](https://user-images.githubusercontent.com/68496774/157412698-f2ad8eaf-3257-42ab-90b9-c2ae810036fc.png)
-![изображение](https://user-images.githubusercontent.com/68496774/157412809-5ad5b725-b964-471b-8b23-6b668034c5b7.png)
+<img src="https://user-images.githubusercontent.com/68496774/157412592-a1f67b83-a21d-46bb-b890-2f5b22013135.png">
+<img src="https://user-images.githubusercontent.com/68496774/157412698-f2ad8eaf-3257-42ab-90b9-c2ae810036fc.png">
+<img src="https://user-images.githubusercontent.com/68496774/157412809-5ad5b725-b964-471b-8b23-6b668034c5b7.png">
 
