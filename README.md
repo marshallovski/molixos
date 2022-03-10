@@ -5,7 +5,7 @@
 	<p>Mozilla Firefox 95 (no issues; older Firefox versions aren't tested yet)</p>
 <h3>Features:</h3>
 <ul>
-	<li>Non-optimized, but fully async window manager (<code>winmngr</code>)</li>
+	<li>Fully async window manager (<code>winmngr</code>)</li>
 	<li>Native JavaScript (no f*cking React, jQuery or other frameworks)</li>
 </ul>
 <h3>TODO:</h3>
