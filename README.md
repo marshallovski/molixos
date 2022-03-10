@@ -19,6 +19,8 @@
 	<li>Desktop customization (like changing color of background, etc.)</li>
 	<li>Calculator?</li>
 	<li>Make windows and window buttons more modern (like Plastique or Plastik theme in Qt :trollface:)</li>
+	<li>Notification server (manager)</li>
+	<li>Closing/minimizing windows</li>
 </ul>
 <h3>Screenshots</h3>
 <p>(all screenshots captured at Firefox 95 in Windows 8.1)</p>
