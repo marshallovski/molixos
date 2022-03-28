@@ -1,0 +1,29 @@
+{
+  "name": "molix",
+  "version": "0.0.0",
+  "description": "A lightweight web-powered OS written in HTML5 and native JS",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marshallovski/molixos.git"
+  },
+  "keywords": [
+    "os",
+    "molix",
+    "molixos",
+    "webos"
+  ],
+  "author": "marshallovski",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/marshallovski/molixos/issues"
+  },
+  "homepage": "https://github.com/marshallovski/molixos#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3"
+  }
+}
