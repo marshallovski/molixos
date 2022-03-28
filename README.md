@@ -2,7 +2,7 @@
 <p>A lightweight web-powered OS written in HTML5 and native JS. Made in Ukraine.</p>
 <h3>Browsers support:</h3> 
 	<p>Google Chrome 60+ (issue with window resizing)</p>
-	<p>Mozilla Firefox 95 (no issues; older Firefox versions aren't tested yet)</p>
+	<p>Mozilla Firefox 60+ (no issues)</p>
 <h3>Features:</h3>
 <ul>
 	<li>Fully async window manager (<code>winmngr</code>)</li>
