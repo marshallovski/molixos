@@ -21,6 +21,12 @@
 	<li>Notification manager</li>
 	<li>Closing/minimizing windows</li>
 </ul>
+<h3>Current work:</h3>
+<ul>
+	<li>Updating window manager (make more modern theme, closing/minimizing windows)</li>
+	<li>Panel</li>
+	<li>Fully server siding (Node.js + ejs)</li>
+</ul>
 <h3>Screenshots</h3>
 <p>(all screenshots captured at Firefox 95 in Windows 8.1)</p>
 <img src="https://user-images.githubusercontent.com/68496774/157412592-a1f67b83-a21d-46bb-b890-2f5b22013135.png" style="width: 736px;">
