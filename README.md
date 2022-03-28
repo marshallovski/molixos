@@ -13,13 +13,12 @@
 	<li>Multi-language</li>
 	<li>Error handler in all OS (in modules, third-party apps, functions)</li>
 	<li>Find contributors</li>
-	<li>Optimize winmngr code (but it already optimized, anyway)</li>
 	<li>Make default apps (like calc, text editor, image viewer, etc.)</li>
 	<li>Panel</li>
 	<li>Desktop customization (like changing color of background, etc.)</li>
 	<li>Calculator?</li>
-	<li>Make windows and window buttons more modern (like Plastique or Plastik theme in Qt :trollface:)</li>
-	<li>Notification server (manager)</li>
+	<li>Make windows and window buttons more modern</li>
+	<li>Notification manager</li>
 	<li>Closing/minimizing windows</li>
 </ul>
 <h3>Screenshots</h3>
