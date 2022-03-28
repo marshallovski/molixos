@@ -1,4 +1,5 @@
 <h1>Molix</h1>
+<small>current version: 4753_dev</small>
 <p>A lightweight web-powered OS written in HTML5 and native JS. Made in Ukraine.</p>
 <h3>Browsers support:</h3> 
 	<p>Google Chrome 60+ (issue with window resizing)</p>
