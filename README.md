@@ -13,10 +13,9 @@
 	<li>Multi-language</li>
 	<li>Error handler in all OS (in modules, third-party apps, functions)</li>
 	<li>Find contributors</li>
-	<li>Make default apps (like calc, text editor, image viewer, etc.)</li>
+	<li>Make default apps (like calculator, text editor, image viewer, etc.)</li>
 	<li>Panel</li>
 	<li>Desktop customization (like changing color of background, etc.)</li>
-	<li>Calculator?</li>
 	<li>Make windows and window buttons more modern</li>
 	<li>Notification manager</li>
 	<li>Closing/minimizing windows</li>
