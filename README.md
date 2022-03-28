@@ -25,6 +25,9 @@
 <ul>
 	<li>Updating window manager (make more modern theme, closing/minimizing windows)</li>
 	<li>Panel</li>
+</ul>
+<h3>Already done:</h3>
+<ul>
 	<li>Fully server siding (Node.js + ejs)</li>
 </ul>
 <h3>Screenshots</h3>
