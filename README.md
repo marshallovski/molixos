@@ -1,36 +1,46 @@
-<h1>Molix</h1>
-<small>current version: 4753_dev</small>
-<p>A lightweight web-powered OS written in HTML5 and native JS. Made in Ukraine.</p>
-<h3>Browsers support:</h3> 
-	<p>Google Chrome 60+ (issue with window resizing)</p>
-	<p>Mozilla Firefox 60+ (no issues)</p>
-<h3>Features:</h3>
+# Molix
+<h3>A lightweight web-powered OS written in HTML5 and Node.js</h3>
+Current version: 4754dev (see <a href="https://github.com/marshallovski/molixos/README.md#changes-in-latest-release">changes</a> in this release)
+<hr>
+
+# Browsers support:
+Google Chrome 60+ (internal Chrome issue with window resizing)
+<br>
+Mozilla Firefox 60+ (no issues, in older Firefox versions not tested yet)	
+
+# Features
 <ul>
 	<li>Fully async window manager (<code>winmngr</code>)</li>
-	<li>Native JavaScript (no f*cking React, jQuery or other frameworks)</li>
+	<li>Native JavaScript (no f*cking React, jQuery or other shit)</li>
 </ul>
-<h3>TODO:</h3>
+
+# TODO:
 <ul>
 	<li>Multi-language</li>
-	<li>Error handler in all OS (in modules, third-party apps, functions)</li>
+	<li>Error handler in modules, third-party apps, functions</li>
 	<li>Find contributors</li>
 	<li>Make default apps (like calculator, text editor, image viewer, etc.)</li>
-	<li>Panel</li>
+	<li>Action panel</li>
 	<li>Desktop customization (like changing color of background, etc.)</li>
 	<li>Make windows and window buttons more modern</li>
 	<li>Notification manager</li>
 	<li>Closing/minimizing windows</li>
+	<li>Low-level API (example: RAM usage - <code>GET /api/sys</code> -> response in JSON -> memoryUsage)</li>
 </ul>
-<h3>Current work:</h3>
+
+# Changes in latest release:
+<ul>
+	<li>Migrated from express to fastify (<strong>perfomance +</strong>)</li>
+	<li>Start writing API for hardware, etc.</li>
+</ul>
+
+# Current work:
 <ul>
 	<li>Updating window manager (make more modern theme, closing/minimizing windows)</li>
-	<li>Panel</li>
+	<li>Action panel</li>
 </ul>
-<h3>Already done:</h3>
-<ul>
-	<li>Fully server siding (Node.js + ejs)</li>
-</ul>
-<h3>Screenshots</h3>
+
+# Screenshots
 <p>(all screenshots captured at Firefox 95 in Windows 8.1)</p>
 <img src="https://user-images.githubusercontent.com/68496774/157412592-a1f67b83-a21d-46bb-b890-2f5b22013135.png" style="width: 736px;">
 <img src="https://user-images.githubusercontent.com/68496774/157412698-f2ad8eaf-3257-42ab-90b9-c2ae810036fc.png" style="width: 736px;">
