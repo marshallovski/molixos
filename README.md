@@ -1,6 +1,6 @@
 # Molix
 <h3>A lightweight web-powered OS written in HTML5 and Node.js</h3>
-Current version: 4754dev (see <a href="https://github.com/marshallovski/molixos/README.md#changes-in-latest-release">changes</a> in this release)
+Current version: 4754dev (see <a href="https://github.com/marshallovski/molixos/blob/main/README.md#changes-in-latest-release">changes</a> in this release)
 <hr>
 
 # Browsers support:
