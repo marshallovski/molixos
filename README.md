@@ -16,6 +16,7 @@ Mozilla Firefox 60+ (no issues, in older Firefox versions not tested yet)
 
 # TODO:
 <ul>
+	<li>Bootable image</li>
 	<li>Multi-language</li>
 	<li>Error handler in modules, third-party apps, functions</li>
 	<li>Find contributors</li>
@@ -36,6 +37,7 @@ Mozilla Firefox 60+ (no issues, in older Firefox versions not tested yet)
 
 # Current work:
 <ul>
+	<li>Bootable image</li>
 	<li>Updating window manager (make more modern theme, closing/minimizing windows)</li>
 	<li>Action panel</li>
 </ul>
