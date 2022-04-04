@@ -33,6 +33,7 @@ Mozilla Firefox 60+ (no issues, in older Firefox versions not tested yet)
 <ul>
 	<li>Migrated from express to fastify (<strong>perfomance +</strong>)</li>
 	<li>Start writing API for hardware, etc.</li>
+	<li>Attempt to make window buttons more modern (buttons is broken now)</li>
 </ul>
 
 # Current work:
