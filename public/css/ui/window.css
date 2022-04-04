@@ -3,31 +3,28 @@
   z-index: 999;
   width: 350px;
   border-radius: 3px;
-  box-shadow: 0 0 8px #333;
+  box-shadow: 0 0 3px #333;
   resize: both;
   overflow: auto;
-  min-width: 100px;
+  min-width: 200px;
   background-color: #333;
-  min-width: 150px;
+  min-height: 150px;
 }
 
 .window_header {
   color: #000;
   text-align: center;
-  background-color: silver;
+  background-color: #cecccd;
   font-size: 20px;
-  font-family: 'DejaVu Serif', sans-serif;
+  font-family: 'DejaVu Sans', sans-serif;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  min-width: 150px;
-  min-height: 30px;
   position: sticky;
-  position: -webkit-sticky;
   top: 0;
 }
 
 .window_header::selection {
-  background: none;
+  background-color: none;
   cursor: pointer;
 }
 
@@ -37,29 +34,30 @@
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
   font-family: 'DejaVu Sans', sans-serif;
-}
-
-.text-center {
-  text-align: center;
+  margin-top: 10px;
 }
 
 .window_header_buttons {
   float: right;
+  margin-right: 5px;
 }
 
 .window_header_buttons::selection {
-  background: none;
+  background-color: none;
   cursor: pointer;
 }
 
 .window_header_button {
-  border: 1px solid #000;
   transition: all 250ms;
   cursor: pointer;
+  border: 0;
+  background-color: #2b2a33;
+  border-radius: 4px;
+  color: #9c9c9c;
 }
 
 .window_header_button::selection {
-  background: none;
+  background-color: none;
   cursor: pointer;
 }
 
@@ -74,6 +72,16 @@
 
 .closebtn:hover {
   background-color: #e53935;
+  color: #333;
+}
+
+.otherbtn {
+  transition: all 250ms;
+  width: 15px;
+}
+
+.otherbtn:hover {
+  color: #333;
 }
 
 .errorwindow_icon {
@@ -87,6 +95,6 @@
 }
 
 .window_icon {
-  width: 16px;
-  vertical-align: middle;
+  width: 20px;
+  vertical-align: calc(top + 1px);
 }

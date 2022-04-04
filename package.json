@@ -4,7 +4,7 @@
   "description": "A lightweight web-powered OS written in HTML5 and native JS",
   "main": "server.js",
   "scripts": {
-    "test": "node server.js"
+    "start": "node --max-old-space-size=16 server.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,8 @@
   "homepage": "https://github.com/marshallovski/molixos#readme",
   "dependencies": {
     "ejs": "^3.1.6",
-    "express": "^4.17.3"
+    "fastify": "^3.27.4",
+    "fastify-static": "^4.6.1",
+    "point-of-view": "^5.2.0"
   }
 }

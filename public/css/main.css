@@ -21,7 +21,7 @@ body {
 }
 
 .warn {
-  background: #ff0;
+  background-color: #ff0;
   color: #333;
   font-size: 14px;
   border-radius: 3px;
@@ -29,7 +29,7 @@ body {
 }
 
 .ini {
-  background: #32c600;
+  background-color: #32c600;
   color: #eee;
   font-size: 12px;
   margin-top: 1.3em;
@@ -38,7 +38,7 @@ body {
 }
 
 .info {
-  background: #fff;
+  background-color: #fff;
   color: #000;
   font-size: 12px;
   width: 300px;
@@ -51,4 +51,8 @@ body {
 
 .boot-logo {
   width: 350px;
+}
+
+.text-center {
+  text-align: center;
 }

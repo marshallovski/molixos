@@ -3,10 +3,13 @@
  * @description Molix window manager (supports HTML code in content)
  * @function createWindow
  * @function createErrorWindow
- * @example winmngr.createWindow('hello world!', 'This is a test window, created by <code>winmngr</code>', 9999, './assets/icons/infoIcon.png')
+ * @example winmngr.createWindow('hello world!', 'This is a test window, created by <code>winmngr</code>', 9999, '/assets/icons/infoIcon.png')
  */
+
+'use strict';
+
 const winmngr = {
-  dragWindow: async function dragWindow(windowel) {
+  dragWindow(windowel) {
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     windowel.forEach(el => {
       el.onmousedown = dragMouseDown;
@@ -37,9 +40,9 @@ const winmngr = {
       }
     });
   },
-  createWindow: async function createWindow({ title, content, id, icon, height, classes, style }) {
+  async createWindow({ title, content, id, icon, height, classes, style }) {
     if (!title || !content || !id || !icon) {
-      molix.logEvent(`winmngr error: Please provide missing arguments at winmngr.createWindow(). window values:\nwintitle = ${title ? title : 'not provided'}, wincontent = ${content ? content : 'not provided'}, winid = ${id ? id : 'not provided'}, winicon = ${icon ? icon : 'not provided'}`);
+      molix.logging.log(`winmngr error: Please provide missing arguments at winmngr.createWindow(). window values:\nwintitle = ${title ? title : 'not provided'}, wincontent = ${content ? content : 'not provided'}, winid = ${id ? id : 'not provided'}, winicon = ${icon ? icon : 'not provided'}`);
       return winmngr.createErrorWindow('Error creating window', `Please provide missing arguments at winmngr.createWindow(). Window values:<br>wintitle = ${title ? title : '<b>not provided</b>'}, wincontent = ${content ? content : '<b>not provided</b>'}, winid = ${id ? id : '<b>not provided</b>'}, winicon = ${icon ? icon : '<b>not provided</b>'}`, Math.floor(1000 + Math.random() * 9000));
     }
     $('id', 'molix').innerHTML += (
@@ -48,16 +51,16 @@ const winmngr = {
       <img src="${icon ? icon : './assets/icons/errorIcon.png'}" class="window_icon">
       ${title}
       <div class="window_header_buttons">
-        <span class="window_header_button">-</span>
+        <span class="window_header_button otherbtn">&#8211;</span>
         <span class="window_header_button closebtn">&times;</span>
       </div>
     </div>
    <div class="window_content ${classes ? classes : ''}" style="height: ${height ? `${height}px` : 'inherit'}; ${style ? style : ''}">${content}</div>
   </div>
   `);
-    molix.logEvent(`winmngr: created default window, ID: ${id}, window title: ${title}`);
+    molix.logging.log(`winmngr: created default window, ID: ${id ? id : 'empty'}, window title: ${title ? title : 'empty'}`);
   },
-  createErrorWindow: async function createErrorWindow({ title, content, id }) {
+  async createErrorWindow({ title, content, id }) {
     if (!content) {
       content = 'Error content is empty';
     }
@@ -72,7 +75,7 @@ const winmngr = {
     <img src="./assets/icons/errorIcon.png" class="window_icon">
       ${title}
       <div class="window_header_buttons">
-        <span class="window_header_button">-</span>
+        <span class="window_header_button otherbtn">&#8211;</span>
         <span class="window_header_button closebtn">&times;</span>
       </div>
     </div>
@@ -82,7 +85,7 @@ const winmngr = {
     </div>
   </div>`
     );
-    molix.logEvent(`winmngr: created error window, ID: ${id}, window title: ${title}`);
+    molix.logging.log(`winmngr: created error window, ID: ${id ? id : 'empty'}, window title: ${title ? title : 'empty'}`);
   },
 };
 
