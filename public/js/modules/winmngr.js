@@ -20,7 +20,7 @@ const winmngr = {
         pos4 = e.clientY;
         document.onmouseup = closeDragElement;
         document.onmousemove = elementDrag;
-        document.querySelector('body').style.userSelect = 'none';
+        document.body.style.userSelect = 'none';
       }
 
       function elementDrag(e) {
@@ -34,7 +34,7 @@ const winmngr = {
       }
 
       function closeDragElement() {
-        document.querySelector('body').style.userSelect = 'initial';
+        document.body.style.userSelect = 'initial';
         document.onmouseup = null;
         document.onmousemove = null;
       }
