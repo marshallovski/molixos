@@ -1,6 +1,6 @@
 # Molix
 <h3>A lightweight web-powered OS written in HTML5 and Node.js</h3>
-Current version: 4754-dev (see <a href="https://github.com/marshallovski/molixos/blob/main/README.md#changes-in-latest-release">changes</a> in this release)
+Current version: 4755-dev (see <a href="https://github.com/marshallovski/molixos/blob/main/README.md#changes-in-latest-release">changes</a> in this release)
 <hr>
 
 # Browsers support:
@@ -18,7 +18,6 @@ Mozilla Firefox 60+ (no issues, in older Firefox versions not tested yet)
 <ul>
 	<li>Bootable image</li>
 	<li>Multi-language</li>
-	<li>Error handler in modules, third-party apps, functions</li>
 	<li>Find contributors</li>
 	<li>Make default apps (like calculator, text editor, image viewer, etc.)</li>
 	<li>Action panel</li>
@@ -31,9 +30,10 @@ Mozilla Firefox 60+ (no issues, in older Firefox versions not tested yet)
 
 # Changes in latest release:
 <ul>
-	<li>Migrated from express to fastify (<strong>perfomance +</strong>)</li>
-	<li>Start writing API for hardware, etc.</li>
-	<li>Attempt to make window buttons more modern (buttons is broken now)</li>
+	<li>Fixed <a href="https://github.com/marshallovski/molixos/issues/4">Issue #4</a></li>
+	<li>Fixed <a href="https://github.com/marshallovski/molixos/issues/3">Issue #3</a>
+	<li>Attempt to use <code>simple-window-manager</code> (see it on <a href="https://github.com/davidfig/window-manager">GitHub</a>)</li>
+	<li>... and many small improvements</li>
 </ul>
 
 # Current work:
@@ -41,11 +41,10 @@ Mozilla Firefox 60+ (no issues, in older Firefox versions not tested yet)
 	<li>Bootable image</li>
 	<li>Updating window manager (make more modern theme, closing/minimizing windows)</li>
 	<li>Action panel</li>
+	<li>Low-level API</li>
 </ul>
 
 # Screenshots
-<p>(all screenshots are old, captured at Firefox 95 in Windows 8.1)</p>
-<img src="https://user-images.githubusercontent.com/68496774/157412592-a1f67b83-a21d-46bb-b890-2f5b22013135.png" style="width: 736px;">
-<img src="https://user-images.githubusercontent.com/68496774/157412698-f2ad8eaf-3257-42ab-90b9-c2ae810036fc.png" style="width: 736px;">
-<img src="https://user-images.githubusercontent.com/68496774/157412809-5ad5b725-b964-471b-8b23-6b668034c5b7.png" style="width: 736px;">
-<img src="https://user-images.githubusercontent.com/68496774/157416496-e380f097-638f-430f-803f-cfd35bd9582b.png" style="width: 736px;">
+<p>(all screenshots captured at Firefox Dev Edition 99.0b2 in Debian 11 LXQt)</p>
+
+![изображение](https://user-images.githubusercontent.com/68496774/162422312-95d5d4a1-5515-4d82-b82b-3734d3fbe19d.png)
