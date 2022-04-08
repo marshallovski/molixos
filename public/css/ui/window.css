@@ -6,7 +6,7 @@
   box-shadow: 0 0 3px #333;
   resize: both;
   overflow: auto;
-  min-width: 200px;
+  min-width: 270px;
   background-color: #333;
   min-height: 150px;
 }
@@ -21,6 +21,7 @@
   border-top-right-radius: 3px;
   position: sticky;
   top: 0;
+  cursor: default;
 }
 
 .window_header::selection {
@@ -67,6 +68,9 @@
 }
 
 .closebtn {
+  display: inline-block;
+  height: 20px;
+  vertical-align: -1%;
   transition: all 250ms;
 }
 
@@ -76,12 +80,15 @@
 }
 
 .otherbtn {
+  display: inline-block;
   transition: all 250ms;
   width: 15px;
+  color: #333;
+  background-color: transparent;
 }
 
 .otherbtn:hover {
-  color: #333;
+  color: #111;
 }
 
 .errorwindow_icon {
@@ -96,5 +103,5 @@
 
 .window_icon {
   width: 20px;
-  vertical-align: calc(top + 1px);
+  vertical-align: text-top;
 }

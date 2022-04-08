@@ -44,7 +44,7 @@ if (winmngr == undefined || !winmngr) {
 if (molix.moduleCount == molix.defaultModulesCount) {
   molix.allModulesLoaded = true;
   $('id', 'boot').innerHTML += '<span class="info">[initializing]: <b>DONE</b></span>';
-  $('id', 'boot').remove();
+  $('id', 'boot').style.display = 'none';
   $('id', 'molix').style.display = 'block';
   molix.logging.log(`Boot successfull, loaded ${molix.moduleCount} modules in total, loaded all modules: ${molix.allModulesLoaded}`);
 } else {

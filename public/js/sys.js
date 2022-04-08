@@ -4,8 +4,8 @@
  */
 
 const molix = {
-  osSector: document.getElementById('molix'),
-  bootSector: document.getElementById('boot'),
+  osSector: $('id', 'molix'),
+  bootSector: $('id', 'boot'),
   allModulesLoaded: false,
   moduleCount: 0,
   defaultModulesCount: 3,
@@ -18,10 +18,11 @@ const molix = {
   },
   scrwidth: window.innerWidth,
   scrheight: window.innerHeight,
-  version: '4753_dev'
+  version: '4755-dev'
 }
 
-function $(method, element) {
+// @TODO: remove this func and replace with document.getElementById() and document.querySelector()
+function $(method, element) { 
   switch (method) {
     case 'id':
       return document.getElementById(element)

@@ -9,6 +9,15 @@
 'use strict';
 
 const winmngr = {
+  randomPID() {
+    let array = new Uint32Array(10);
+    self.crypto.getRandomValues(array);
+
+    for (var i = 0; i < array.length; i++) {
+      return array[i];
+    }
+  },
+  windows: [],
   dragWindow(windowel) {
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     windowel.forEach(el => {
@@ -43,10 +52,11 @@ const winmngr = {
   async createWindow({ title, content, id, icon, height, classes, style }) {
     if (!title || !content || !id || !icon) {
       molix.logging.log(`winmngr error: Please provide missing arguments at winmngr.createWindow(). window values:\nwintitle = ${title ? title : 'not provided'}, wincontent = ${content ? content : 'not provided'}, winid = ${id ? id : 'not provided'}, winicon = ${icon ? icon : 'not provided'}`);
-      return winmngr.createErrorWindow('Error creating window', `Please provide missing arguments at winmngr.createWindow(). Window values:<br>wintitle = ${title ? title : '<b>not provided</b>'}, wincontent = ${content ? content : '<b>not provided</b>'}, winid = ${id ? id : '<b>not provided</b>'}, winicon = ${icon ? icon : '<b>not provided</b>'}`, Math.floor(1000 + Math.random() * 9000));
+      return winmngr.createErrorWindow('Error creating window', `Please provide missing arguments at winmngr.createWindow(). Window values:<br>wintitle = ${title ? title : '<b>not provided</b>'}, wincontent = ${content ? content : '<b>not provided</b>'}, winid = ${id ? id : '<b>not provided</b>'}, winicon = ${icon ? icon : '<b>not provided</b>'}`, this.randomPID());
     }
+ 
     $('id', 'molix').innerHTML += (
-      `<div class="window" id="${id ? id : Math.floor(1000 + Math.random() * 9000)}">
+      `<div class="window" id="${id ? id : this.randomPID()}">
     <div class="window_header">  
       <img src="${icon ? icon : './assets/icons/errorIcon.png'}" class="window_icon">
       ${title}
@@ -66,11 +76,11 @@ const winmngr = {
     }
 
     if (!title) {
-      title = 'Error content is empty';
+      title = 'Error title is empty';
     }
 
     $('id', 'molix').innerHTML += (
-      `<div class="window" id="${id ? id : Math.floor(1000 + Math.random() * 9000)}">
+      `<div class="window" id="${id ? id : this.randomPID()}">
     <div class="window_header">
     <img src="./assets/icons/errorIcon.png" class="window_icon">
       ${title}
@@ -86,7 +96,7 @@ const winmngr = {
   </div>`
     );
     molix.logging.log(`winmngr: created error window, ID: ${id ? id : 'empty'}, window title: ${title ? title : 'empty'}`);
-  },
+  }
 };
 
 const mutationObserver = new MutationObserver(function (mutations) {
@@ -104,4 +114,5 @@ mutationObserver.observe(molix.osSector, {
   attributeOldValue: true,
   characterDataOldValue: true
 });
+
 

@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="/css/ui/colors.css">
 </head>
 
-<body>
+<body onerror="winmngr.createErrorWindow({ title: molix.strings.INTERNAL_ERROR, content: `${molix.strings.INTERNAL_ERROR}<br>`, id: winmngr.randomPID(), classes: 'text-center' })">
   <div id="boot">
     <span style="font-size: 20px; text-align: center; color: #1ab799;">Welcome to Molix OS!</span>
     <p class="ini">
@@ -29,27 +29,26 @@
   </div>
 
   <div id="molix">
-    <h1 id="welcometext"></h1>
-    <div class="actpanel"></div>
+    <h1 id="welcometext">Welcome to Molix</h1>
+    <div class="actpanel">action panel (soon)</div>
   </div>
+
   <script>
     window.addEventListener('DOMContentLoaded', () => {
       winmngr.createWindow({
         title: 'molix event journal',
         content: molix.logging.eventJournal,
-        id: Math.floor(1000 + Math.random() * 9000),
         icon: '/assets/icons/infoIcon.png'
       });
 
       winmngr.createWindow({
         title: 'Hardware information',
-        content: `RAM usage: ${molix.hardware.memoryUsage}<br>CPU:`,
-        id: Math.floor(1000 + Math.random() * 9000),
+        content: `RAM usage: <br>CPU: `,
+        id: winmngr.randomPID(),
         icon: '/assets/icons/infoIcon.png',
-        height: 10,
+        height: 570,
         classes: 'text-center'
       });
-      winmngr.createErrorWindow({ title: 'gg', content: 'geererer', id: 000 });
     });
   </script>
 
@@ -65,8 +64,13 @@
     }
 
     #molix {
-      width: 100%;
       font-family: 'DejaVu Sans', sans-serif;
+      user-select: none;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+      cursor: default;
     }
 
     #boot {
@@ -80,7 +84,32 @@
 
   <script src="/js/utils/hardwareInfo.js"></script>
   <script src="/js/modules/winmngr.js"></script>
-  <script src="/js/third-party/wui.js"></script>
+
+  <script src="/js/third-party/swm/simple-window-manager.min.js" type="module"></script>
+  <script type="module">
+    import { WindowManager } from '/js/third-party/swm/simple-window-manager.min.js'
+
+    const wm = new WindowManager({ backgroundWindow: 'green' });
+    wm.snap()
+
+    const window = wm.createWindow({ width: 500, height: 500, title: 'Test Window' })
+
+    window.content.style.margin = '10px'
+    window.content.innerHTML = 'This is a nifty window.'
+
+      const t = wm.createWindow({
+        width: 300,
+        height: 150,
+        x: 100,
+        y: 100,
+        titlebarHeight: "22px",
+        backgroundTitlebarActive: "green",
+        backgroundTitlebarInactive: "purple",
+        backgroundWindow: "rgb(255,200,255)"
+      });
+      t.content.style.padding = "0.5em", t.content.innerHTML = "This is a pink test window.<br><br>Check out the fancy title bar for other style tests.<br><br><br>And scrolling!!!", t.open()
+  
+  </script>
 </body>
 
 </html>

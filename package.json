@@ -1,10 +1,10 @@
 {
   "name": "molix",
   "version": "0.0.0",
-  "description": "A lightweight web-powered OS written in HTML5 and native JS",
+  "description": "A lightweight web-powered OS written in HTML5 and Node.js",
   "main": "server.js",
   "scripts": {
-    "start": "node --max-old-space-size=16 server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
