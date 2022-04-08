@@ -4,9 +4,11 @@ Current version: 4755-dev (see <a href="https://github.com/marshallovski/molixos
 <hr>
 
 # Browsers support:
-Google Chrome 60+ (internal Chrome issue with window resizing)
+~~Google Chrome 60+ (internal Chrome issue with window resizing)
 <br>
-Mozilla Firefox 60+ (no issues, in older Firefox versions not tested yet)	
+Mozilla Firefox 60+ (no issues, in older Firefox versions not tested yet)~~	
+
+(new releases not tested, but **should** work in Chrome 60 and Firefox 60)
 
 # Features
 <ul>
