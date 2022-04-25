@@ -11,6 +11,10 @@
   min-height: 150px;
 }
 
+.errorwindow {
+  z-index: 999999;
+}
+
 .window_header {
   color: #000;
   text-align: center;
@@ -55,6 +59,7 @@
   background-color: #2b2a33;
   border-radius: 4px;
   color: #9c9c9c;
+  line-height: 1;
 }
 
 .window_header_button::selection {

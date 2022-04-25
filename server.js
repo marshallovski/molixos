@@ -1,6 +1,7 @@
 const fastify = require('fastify')({ logger: true });
 const path = require('path');
 const os = require('os');
+
 let port = 3030;
 
 fastify.register(require("point-of-view"), {
@@ -15,30 +16,48 @@ fastify.register(require('fastify-static'), {
 })
 
 fastify.get('/', async (request, reply) => {
-    return reply.view("/index.ejs", { text: "text" });
+    return reply.view('/views/index.ejs', { text: "text" });
 });
 
 fastify.get('/api/:action', async (request, reply) => {
     let action = request.params.action;
+
+    let sec = os.uptime();
+    let min = sec/60;
+    let hour = min/60;
+       
+    sec = Math.floor(sec);
+    min = Math.floor(min);
+    hour = Math.floor(hour);
+      
+    hour = hour%60;
+    min = min%60;
+    sec = sec%60;
+
     switch (action) {
         case 'sys':
             return {
                 ram: {
                     frontendUsage: `${(process.memoryUsage().rss / 1024 ** 2).toFixed(1)} MB`,
-                    memoryUsage: `${os.freemem()}/${os.totalmem()}`,
-                    freeMemory: `${os.freemem()}`
+                    memoryUsage: `${(os.freemem() / 1e+9).toFixed(3)} MB / ${(os.totalmem() / 1e+9).toFixed(3)} MB`,
+                    freeMemory: `${(os.freemem() / 1e+9).toFixed(3)} MB`
                 },
                 cpu: {
-                    name: require("os").cpus()[0] ? require("os").cpus()[0].model : "unknown",
-                    usage: process.cpuUsage(),
-                    cpus: os.cpus()
-
+                    name: os.cpus()[0] ? os.cpus()[0].model : "unknown CPU",
+                    usage: 'soon', 
+                    //cpus: os.cpus()
+                },
+                other: {
+                    hostname: os.hostname(),
+                    tmpdir: os.tmpdir(),
+                    nodever: process.version,
+                    uptime: `${hour}:${min}:${sec}`
                 }
             };
             break;
 
         default:
-            return { content: '[molix]: select action' };
+            return { content: 'Molix internal API. Please do not use in public.' };
             break;
     }
 });

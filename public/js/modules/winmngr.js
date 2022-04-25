@@ -70,7 +70,7 @@ const winmngr = {
   `);
     molix.logging.log(`winmngr: created default window, ID: ${id ? id : 'empty'}, window title: ${title ? title : 'empty'}`);
   },
-  async createErrorWindow({ title, content, id }) {
+  async createErrorWindow({ title, content, id, after }) {
     if (!content) {
       content = 'Error content is empty';
     }
@@ -79,8 +79,12 @@ const winmngr = {
       title = 'Error title is empty';
     }
 
+    if (after) {
+        (after);
+    }
+
     $('id', 'molix').innerHTML += (
-      `<div class="window" id="${id ? id : this.randomPID()}">
+      `<div class="window errorwindow" id="${id ? id : this.randomPID()}">
     <div class="window_header">
     <img src="./assets/icons/errorIcon.png" class="window_icon">
       ${title}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Molix</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/fonts.css">
+  <link rel="stylesheet" href="/css/ui/window.css">
+
+  <link rel="stylesheet" href="/css/ui/colors.css">
+</head>
+
+<body>
+  <script>
+    window.onerror = function (msg, url, lineNo, columnNo, error) {
+    molix.logging.lastError = 'MOLIX_3rdpartyscriptcrash';
+
+  winmngr.createErrorWindow({ 
+    title: '<span class="txt-org">MOLIX_3rdpartyscriptcrash</span>', 
+    content: `Some script in Molix is crashed with error.<br>Last error: ${molix.logging.lastError} ${error}<br>${url}<br>line:column - ${lineNo}:${columnNo}`, 
+    id: winmngr.randomPID(), 
+    classes: 'text-center', 
+    after: setTimeout(() => {
+        molix.reportError();  
+    }, 3500)
+  }); 
+
+
+  return false;
+}
+  </script>
+  <div id="boot">
+    <span style="font-size: 20px; text-align: center; color: #1ab799;">Welcome to Molix OS!</span>
+    <p class="ini">
+      <span class="info" style="border-top-right-radius: 0; border-bottom-right-radius: 0;">[molix]:</span>
+      [initializing]
+      <br>
+    <p class="info" id="nav" style="margin: 8px;"></p>
+    <p class="info" id="let" style="margin: 8px;"></p>
+    <p class="info" id="audio" style="margin: 8px;"></p>
+    <p class="info" id="storage" style="margin: 8px;"></p>
+    <p id="screen" style="margin: 8px;"></p>
+    <p id="winmngr" class="info" style="margin: 8px;"></p>
+  </div>
+
+  <div id="molix">
+    <h1 id="welcometext">Welcome to Molix</h1>
+    <div class="actpanel">action panel (soon)</div>
+    <div id="fps"></div>
+  </div>
+
+  <script>
+    let api;
+fetch('http://localhost:3030/api/sys')
+    .then((response) => response.json())
+    .then((data) => {
+   api = data; 
+  });
+
+
+    window.addEventListener('DOMContentLoaded', () => {
+      winmngr.createWindow({
+        title: 'Molix event journal',
+        content: molix.logging.eventJournal,
+        id: winmngr.randomPID(),
+        icon: '/assets/icons/infoIcon.png',
+        height: 570,
+        classes: 'text-center'
+      });
+
+      winmngr.createWindow({
+        title: 'Hardware information',
+        content: `RAM usage:<br>CPU: `,
+        id: winmngr.randomPID(),
+        icon: '/assets/icons/infoIcon.png'
+      });
+    });
+  </script>
+
+  <style>
+    * {
+      margin: 0;
+    }
+
+    body {
+      background-color: #1ab799;
+      color: #333;
+      font-family: 'DejaVu Sans', sans-serif;
+    }
+
+    #molix {
+      font-family: 'DejaVu Sans', sans-serif;
+      user-select: none;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+      cursor: default;
+    }
+
+    #boot {
+      font-family: 'DejaVu Sans Mono', monospace;
+    }
+  </style>
+  <script src="/js/sys.js"></script>
+  <script src="/js/modules/log.js"></script>
+  <script src="/js/other/strings.js"></script>
+  <script src="/js/boot.js"></script>
+
+ <!--  <script src="/js/utils/hardwareInfo.js"></script> -->
+  <script src="/js/modules/winmngr.js"></script>
+
+  <script src="/js/third-party/swm/simple-window-manager.min.js" type="module"></script>
+  <script type="module">
+    /*import { WindowManager } from '/js/third-party/swm/simple-window-manager.min.js'
+
+    const wm = new WindowManager({ backgroundWindow: 'green' });
+    wm.snap()
+
+    const window = wm.createWindow({ width: 500, height: 500, title: 'Test Window' })
+
+    window.content.style.margin = '10px'
+    window.content.innerHTML = 'This is a nifty window.'
+
+      const t = wm.createWindow({
+        width: 300,
+        height: 150,
+        x: 100,
+        y: 100,
+        titlebarHeight: "22px",
+        backgroundTitlebarActive: "green",
+        backgroundTitlebarInactive: "purple",
+        backgroundWindow: "pink"
+      });
+      t.content.style.padding = "0.5em", t.content.innerHTML = "This is a pink test window.<br><br>Check out the fancy title bar for other style tests.<br><br><br>And scrolling!!!", t.open()
+  */
+  </script>
+  </script>
+</body>
+
+</html>

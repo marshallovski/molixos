@@ -45,8 +45,6 @@ Mozilla Firefox 60+ (no issues, in older Firefox versions not tested yet)~~
 	<li>Action panel</li>
 	<li>Low-level API</li>
 </ul>
-<br>
-<p>All modifications in open-source components will be marked as <code>@MOD</code></p>
 
 # Screenshots
 <p>(all screenshots captured at Firefox Dev Edition 99.0b2 in Debian 11 LXQt)</p>

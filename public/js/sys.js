@@ -11,14 +11,16 @@ const molix = {
   defaultModulesCount: 3,
   defaultBootTimeout: 500,
   reportError() {
-    $('id', 'boot').innerHTML = `<span class="error">Error: ${molix.lastError},<br>reboot in few seconds</span>`;
+    $('id', 'molix').style.display = 'none';  
+    $('id', 'boot').style.display = 'block';
+    $('id', 'boot').innerHTML = `<span class="error">Error: ${molix.logging.lastError || 'not reported'},<br>reboot in few seconds</span>`;
     setTimeout(() => {
       window.location.reload();
     }, 3000);
   },
   scrwidth: window.innerWidth,
   scrheight: window.innerHeight,
-  version: '4755-dev'
+  version: '4756-dev'
 }
 
 // @TODO: remove this func and replace with document.getElementById() and document.querySelector()
