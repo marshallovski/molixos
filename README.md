@@ -45,6 +45,4 @@ Mozilla Firefox 60+ (no issues, in older Firefox versions not tested yet)~~
 </ul>
 
 # Screenshots
-<p>(all screenshots captured at Firefox Dev Edition 99.0b2 in Debian 11 LXQt)</p>
 
-![изображение](https://user-images.githubusercontent.com/68496774/162422312-95d5d4a1-5515-4d82-b82b-3734d3fbe19d.png)
