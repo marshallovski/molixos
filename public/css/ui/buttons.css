@@ -1,0 +1,17 @@
+.modernbtn {
+    padding: 8px 20px;
+    margin: 4px; 
+    background-color: #fff3;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    transition: .2s;
+    border: none;
+  }
+  
+  .modernbtn:hover {
+    background-color: #fff6;
+    color: blueviolet;
+  }

@@ -11,10 +11,6 @@
   min-height: 150px;
 }
 
-.errorwindow {
-  z-index: 999999;
-}
-
 .window_header {
   color: #000;
   text-align: center;
@@ -108,5 +104,5 @@
 
 .window_icon {
   width: 20px;
-  vertical-align: text-top;
+  vertical-align: sub;
 }

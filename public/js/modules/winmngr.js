@@ -84,7 +84,7 @@ const winmngr = {
     }
 
     $('id', 'molix').innerHTML += (
-      `<div class="window errorwindow" id="${id ? id : this.randomPID()}">
+      `<div class="window" id="${id ? id : this.randomPID()}">
     <div class="window_header">
     <img src="./assets/icons/errorIcon.png" class="window_icon">
       ${title}

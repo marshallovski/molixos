@@ -1,0 +1,44 @@
+.actionpanel {
+	background-color: #36393f;
+	color: #eee;
+	padding: 8px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	border-top: 1px solid #fff;
+	z-index: 1000;
+}
+
+.actionpanel_calendar {
+	float: right;
+	font-size: 12px;
+	margin-right: 1em;
+	text-align: center;
+}
+
+.actionpanel_menu_item {
+	background-color: antiquewhite;
+	border: 1px solid #333;
+}
+
+.actionpanel_menu_itemIcon {
+	width: 35px;
+}
+
+#opensysmenu {
+	background-color: #C0C0C0;
+	border: 0;
+	color: #333;
+	vertical-align: bottom;
+	border-radius: 16px;
+	padding: 8px;
+	transition: background-color 400ms;
+}
+
+#opensysmenu:hover {
+	background-color: #A0A0A0;
+}
+
+/* .menu {
+	transition: all 1s;
+} */
