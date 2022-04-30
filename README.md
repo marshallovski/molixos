@@ -4,13 +4,17 @@ Current version: 4756-dev (see <a href="https://github.com/marshallovski/molixos
 <hr>
 
 # Browsers support:
-~~Google Chrome 60+ (internal Chrome issue with window resizing)
-<br>
-Mozilla Firefox 60+ (no issues, in older Firefox versions not tested yet)~~	
 
-(new releases not tested, but **should** work in Chrome 60 and Firefox 60)
 
 # Install
+
+1. Install Node.js (https://nodejs.org)
+2. Installing and launching:
+<br>
+  2.1 If you running Windows: <br>open folder with Molix code and open terminal by pressing Right mouse button+shift, then click "Open PowerShell here" and type this: <code>cmd</code>, <code>npm i && npm start</code>
+  <br>
+  2.2 If you running Linux:<br>open folder with Molix code, open terminal and type this: <code>npm i && npm start</code>
+3. Open your browser and go to <a href="http://localhost:3030" target="_blank">http://localhost:3030</a>
 
 
 # Features
