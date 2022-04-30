@@ -59,5 +59,5 @@ and so
 <p>(all screenshots captured at Firefox 99.0.1 (64-bit) in Windows 10)</p>
 
 
-![image](https://user-images.githubusercontent.com/68496774/166120653-104d7e88-38d4-4419-98ea-1ca48c7b9f9d.png)
+![image](https://user-images.githubusercontent.com/68496774/166120708-68f21cb3-a6ec-475a-b153-b31c9d5b526e.png)
 
