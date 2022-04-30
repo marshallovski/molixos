@@ -1,6 +1,6 @@
 # Molix
 <h3>A lightweight web-powered OS written in HTML5 and Node.js</h3>
-Current version: 4755-dev (see <a href="https://github.com/marshallovski/molixos/blob/main/README.md#changes-in-latest-release">changes</a> in this release)
+Current version: 4756-dev (see <a href="https://github.com/marshallovski/molixos/blob/main/README.md#changes-in-latest-release">changes</a> in this release)
 <hr>
 
 # Browsers support:
@@ -32,21 +32,24 @@ Mozilla Firefox 60+ (no issues, in older Firefox versions not tested yet)~~
 
 # Changes in latest release:
 <ul>
-	<li>Fixed <a href="https://github.com/marshallovski/molixos/issues/4">Issue #4</a></li>
-	<li>Fixed <a href="https://github.com/marshallovski/molixos/issues/3">Issue #3</a>
-	<li>Attempt to use <code>simple-window-manager</code> (see it on <a href="https://github.com/davidfig/window-manager">GitHub</a>)</li>
-	<li>... and many small improvements</li>
+	<li>Fixed window buttons (again)</li>
+		<li>Some work with API</li>
+	<li>Stopped using simple-window-manager</li>
+		<li>Action panel</li>
+			<li>Now windows can't be over action panel</li>
+
+and so
 </ul>
 
 # Current work:
 <ul>
-	<li>Bootable image</li>
 	<li>Updating window manager (make more modern theme, closing/minimizing windows)</li>
 	<li>Action panel</li>
-	<li>Low-level API</li>
+	<li>Hardware API</li>
+	<li>"Start" menu</li>
 </ul>
 
 # Screenshots
-<p>(all screenshots captured at Firefox Dev Edition 99.0b2 in Debian 11 LXQt)</p>
+<p>(all screenshots captured at Firefox 99.0.1 (64-bit) in Windows 10)</p>
+![image](https://user-images.githubusercontent.com/68496774/166097314-19ce8f13-713c-4f05-bb48-236160adb58f.png)
 
-![изображение](https://user-images.githubusercontent.com/68496774/162422312-95d5d4a1-5515-4d82-b82b-3734d3fbe19d.png)
