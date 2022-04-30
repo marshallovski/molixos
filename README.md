@@ -10,10 +10,12 @@ Mozilla Firefox 60+ (no issues, in older Firefox versions not tested yet)~~
 
 (new releases not tested, but **should** work in Chrome 60 and Firefox 60)
 
+# Install
+
+
 # Features
 <ul>
 	<li>Fully async window manager (<code>winmngr</code>)</li>
-	<li>Native JavaScript (no f*cking React, jQuery or other shit)</li>
 </ul>
 
 # TODO:
