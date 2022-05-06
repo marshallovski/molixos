@@ -1,6 +1,6 @@
 # Molix
 <h3> A lightweight web-powered OS </h3>
-Current version: <strong>4757-dev</strong> (see <a href="#changes-in-latest-release">changes</a> in this release)
+Current version: <strong>hotfix_4757-dev</strong> (see <a href="#changes-in-latest-release">changes</a> in this release)
 <hr>
 
 # Browsers support:
@@ -47,6 +47,11 @@ Soon
 	<li>Code improvements by eslint</li>
 	<li>Restoring windows is working now</li>
 	<li> Created /misc API endpoint for other information (like tmpdir, userinfo, etc.)</li>
+	<br>
+	<strong><code>hotfix_4757-dev</code> Hotfix changes:</strong>
+	<li>Fixed issue https://github.com/marshallovski/molixos/issues/7</li>
+	<li>Fixed issue https://github.com/marshallovski/molixos/issues/6</li>
+	<li> Removed <code>winid</code> property from <code>winmngr</code></li>
 </ul>
 
 # Current work:
