@@ -1,7 +1,7 @@
 {
   "name": "molix",
   "version": "0.0.0",
-  "description": "A lightweight web-powered OS written in HTML5 and Node.js",
+  "description": "A lightweight web-powered OS",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -23,10 +23,16 @@
   },
   "homepage": "https://github.com/marshallovski/molixos#readme",
   "dependencies": {
-    "canvas": "^2.9.1",
     "ejs": "^3.1.6",
     "fastify": "^3.27.4",
     "fastify-static": "^4.6.1",
     "point-of-view": "^5.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.14.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.0",
+    "eslint-plugin-promise": "^6.0.0"
   }
 }

@@ -2,20 +2,6 @@ body {
   overflow: hidden;
 }
 
-#boot {
-  padding: 18px;
-  background-color: blue;
-  height: 100vh;
-}
-
-.red {
-  color: red !important;
-}
-
-#welcometext {
-  text-align: center;
-}
-
 .error {
   color: red;
 }
@@ -57,10 +43,6 @@ body {
   text-align: center;
 }
 
-.dblock {
-  display: block;
-}
-
 #test {
   width: 100px;
   background: #dfdfdf;
@@ -74,4 +56,14 @@ body {
   width: 150px;
   height: 150px;
   background: #d3d3d3;
+}
+
+#boot {
+  display: none;
+  height: 100vh;
+  width: 100vh;
+  background-color: blue;
+  z-index: 9999999;
+  text-align: center;
+  font-family: 'DejaVu Sans Mono', monospace;
 }

@@ -1,5 +1,5 @@
 .actionpanel {
-	background-color: #36393f;
+	background: rgba(54, 57, 63, 0.8);
 	color: #eee;
 	padding: 8px;
 	position: fixed;
@@ -39,6 +39,25 @@
 	background-color: #A0A0A0;
 }
 
-/* .menu {
-	transition: all 1s;
-} */
+.actionpanel_apptab {
+	display: inline-block;
+	background-color: #455a64;
+	color: #fff;
+	border-radius: 3px;
+	margin-left: 1em;
+	max-width: 150px;
+}
+
+.apptab_icon {
+	width: 25px;
+	float: left;
+	margin: 5px;
+}
+
+.apptab_appname {
+	margin-right: 3px;
+	line-height: 0;
+	margin-bottom: 0;
+	vertical-align: middle;
+	font-size: 10px;
+}

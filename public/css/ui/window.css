@@ -2,6 +2,8 @@
   position: absolute;
   z-index: 999;
   width: 350px;
+  max-width: 1280px;
+  max-height: 800px;
   border-radius: 3px;
   box-shadow: 0 0 3px #333;
   resize: both;
@@ -21,11 +23,12 @@
   border-top-right-radius: 3px;
   position: sticky;
   top: 0;
+  width: 100%;
   cursor: default;
 }
 
 .window_header::selection {
-  background-color: none;
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -44,7 +47,7 @@
 }
 
 .window_header_buttons::selection {
-  background-color: none;
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -55,11 +58,11 @@
   background-color: #2b2a33;
   border-radius: 4px;
   color: #9c9c9c;
-  line-height: 1;
+  line-height: 1.0;
 }
 
 .window_header_button::selection {
-  background-color: none;
+  background-color: transparent;
   cursor: pointer;
 }
 
