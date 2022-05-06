@@ -46,14 +46,14 @@ const winmngr = {
     })
   },
 
-  async createWindow ({ title, content, id, icon, height, classes, style }) {
-    if (!title || !content || !id || !icon) {
-      molix.logging.log(`winmngr error: Please provide missing arguments at winmngr.createWindow(). window values:\nwintitle = ${title || 'not provided'}, wincontent = ${content || 'not provided'}, winid = ${id || 'not provided'}, winicon = ${icon || 'not provided'}`)
-      return winmngr.createErrorWindow({ title: 'Error creating window', content: `Please provide missing arguments at winmngr.createWindow(). Window values:<br>wintitle = ${title || '<b>not provided</b>'}, wincontent = ${content || '<b>not provided</b>'}, winid = ${id || '<b>not provided</b>'}, winicon = ${icon || '<b>not provided</b>'}`, id: this.randomPID() })
+  async createWindow ({ title, content, icon, height, classes, style }) {
+    if (!title || !content) {
+      molix.logging.log(`winmngr error: Please provide missing arguments at winmngr.createWindow(). window values:\nwintitle = ${title || 'not provided'}, wincontent = ${content || 'not provided'}, winicon = ${icon || 'not provided, not necessarily'}`)
+      return winmngr.createErrorWindow({ title: 'Error creating window', content: `Please provide missing arguments at winmngr.createWindow(). Window values:<br>wintitle = ${title || '<b>not provided</b>'}, wincontent = ${content || '<b>not provided</b>'}, winicon = ${icon || '<b>not provided</b>'}`, id: this.randomPID() })
     }
 
     const winElem = document.createElement('div')
-    winElem.innerHTML = `<div class="window" id="${id || this.randomPID()}">
+    winElem.innerHTML = `<div class="window" id="${this.randomPID()}">
     <div class="window_header">  
       <img src="${icon || './assets/icons/errorIcon.png'}" class="window_icon" onerror="this.src='/assets/icons/errorIcon.png'">
       ${title}
@@ -62,7 +62,7 @@ const winmngr = {
         <span class="window_header_button closebtn" onclick="$('id', '${id}').remove(); if($('id', 'tab-${id}')) return $('id', 'tab-${id}').remove();">&times;</span>
       </div>
     </div>
-   <div class="window_content ${classes || ''}" style="height: ${height || 'inherit'}px; ${style || ''}">${content}</div>
+   <div class="window_content ${classes || ''}" style="height: ${height || '150'}px; ${style || ''}">${content}</div>
    </div>`
     $('id', 'molix').appendChild(winElem)
     this.windows[id] = { title, content, icon, posTop: $('id', id).style.top || '0px' }

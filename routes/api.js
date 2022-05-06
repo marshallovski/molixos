@@ -1,5 +1,4 @@
 const fastify = require('fastify')({ logger: true });
-const { request } = require('https');
 const os = require('os');
 
 async function hw(fastify, options) {
