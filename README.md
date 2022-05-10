@@ -15,6 +15,8 @@ Soon
 <ul>
 	<li>Fully async window manager (<code>winmngr</code>)</li>
 	<li>Minimizing, closing and restoring windows</li>
+	<li>Start panel</li>
+	<li>Very ugly UI</li>
 </ul>
 
 # TODO:
