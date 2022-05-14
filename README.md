@@ -24,7 +24,7 @@ Soon
 
 # TODO:
 <ul>
-	<li>Bootable image</li>
+	<li>Bootable image (.iso or .img)</li>
 	<li>Multi-language</li>
 	<li>Find contributors</li>
 	<li>Make Molix default apps (like calculator, image viewer, email app, text editor, music player, file manager, etc.)</li>
