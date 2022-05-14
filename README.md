@@ -27,8 +27,8 @@ Soon
 	<li>Bootable image</li>
 	<li>Multi-language</li>
 	<li>Find contributors</li>
-	<li>Make Molix goods (or "default apps", like calc, image viewer, email app, text editor, etc.)</li>
-	<li>Desktop customization (like changing color of background, etc.)</li>
+	<li>Make Molix default apps (like calculator, image viewer, email app, text editor, music player, file manager, etc.)</li>
+	<li>Desktop customization (like changing color of background, applying picture wallpapers, etc.)</li>
 	<li>Make windows and window buttons more modern</li>
 	<li>Notification manager</li>
 </ul>
@@ -61,8 +61,7 @@ Soon
 
 # Current work:
 <ul>
-	<li>"Start" menu</li>
-	<li>Molix goods (default apps)</li>
+	<li>Molix default apps</li>
 	<li>Desktop customization</li>
 	<li>Desktop wallpapers</li>
 </ul>
