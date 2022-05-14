@@ -29,7 +29,7 @@ Soon
 	<li>Find contributors</li>
 	<li>Make Molix default apps (like calculator, image viewer, email app, text editor, music player, file manager, etc.)</li>
 	<li>Desktop customization (like changing color of background, applying picture wallpapers, etc.)</li>
-	<li>Make windows and window buttons more modern</li>
+	<li>Make windows more modern</li>
 	<li>Notification manager</li>
 </ul>
 
