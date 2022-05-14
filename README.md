@@ -67,4 +67,4 @@ Soon
 # Screenshots
 <p>(all screenshots captured at Firefox 99.0.1 (64-bit) in Windows 10)</p>
 
-![image](https://user-images.githubusercontent.com/68496774/168071063-e7a11342-b87b-4c24-83a6-0ceb1f5298cd.png)
+![image](https://user-images.githubusercontent.com/68496774/168419008-aa2ebee6-ae21-4a81-bf1d-bd837afa109c.png)
