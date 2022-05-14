@@ -9,7 +9,8 @@ Soon
 # Install
 
 1. Install Node.js (https://nodejs.org)
-2. Installing all packages and launching: `npm i`. Open browser and type <a href="http://localhost:3030" target="_blank">http://localhost:3030</a>
+2. Install all packages: `npm i` and type `npm run start` to launch Molix server 
+3. Open browser and type <a href="http://localhost:3030" target="_blank">http://localhost:3030</a>
 
 # Features
 <ul>
