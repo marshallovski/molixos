@@ -16,7 +16,9 @@ Soon
 	<li>Fully async window manager (<code>winmngr</code>)</li>
 	<li>Minimizing, closing and restoring windows</li>
 	<li>Start panel</li>
-	<li>Very ugly UI</li>
+	<li>Very old UI</li>
+	<li>Own music player (<code>Hiplay</code>)</li>
+	<li>Own file manager (<code>BikeFM</code>)
 </ul>
 
 # TODO:
