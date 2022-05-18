@@ -1,17 +1,39 @@
+button {
+  background-color: #9c9c9c;
+  border: 0;
+  border-radius: 3px;
+  padding: 5px;
+  cursor: pointer;
+}
+
 .modernbtn {
-    padding: 8px 20px;
-    margin: 4px; 
-    background-color: #fff3;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 8px;
-    text-align: center;
-    text-decoration: none;
-    transition: .2s;
-    border: none;
-  }
-  
-  .modernbtn:hover {
-    background-color: #fff6;
-    color: blueviolet;
-  }
+  padding: 8px 20px;
+  margin: 4px;
+  background-color: #fff3;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  transition: .2s;
+  border: none;
+}
+
+.modernbtn:hover {
+  background-color: #fff6;
+  color: #111;
+}
+
+.btn-green {
+  background-color: #3cb98c;
+  color: #eee;
+}
+
+.btn-red {
+  background-color: #f44336;
+}
+
+.btn-blue {
+  background-color: #0082d9;
+  color: #f1f1f1;
+}

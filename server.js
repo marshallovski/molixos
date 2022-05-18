@@ -1,4 +1,4 @@
-const fastify = require('fastify')({ logger: true })
+const fastify = require('fastify')({ logger: false })
 const path = require('path')
 
 const port = 3030
@@ -21,6 +21,9 @@ fastify.register(require('./routes/api.js'), { prefix: '/api' })
 // desktop
 fastify.register(require('./routes/os.js'), { prefix: '/' })
 
+// filemanager
+fastify.register(require('./routes/bikefm.js'), { prefix: '/apps' })
+
 const start = async () => {
   try {
     await fastify.listen(port)
@@ -31,4 +34,22 @@ const start = async () => {
   }
 }
 
+// experimental, but works
+const { WebSocketServer } = require('ws');
+
+const wss = new WebSocketServer({ port: 7070 });
+
+wss.on('connection', function connection(ws) {
+  ws.on('message', function message(data) {
+    try {
+      let res = require('child_process').execSync(data.toString('utf-8'));
+      console.log(Buffer.from(data).toString());
+      ws.send(Buffer.from(res).toString());
+    } catch (e) {
+      ws.send(e);
+      console.log(e);
+    }
+  });
+
+});
 start()

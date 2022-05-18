@@ -43,21 +43,6 @@ body {
   text-align: center;
 }
 
-#test {
-  width: 100px;
-  background: #dfdfdf;
-  padding: 5px;
-  cursor: pointer;
-}
-
-#menu {
-  display: none;
-  margin-top: 10px;
-  width: 150px;
-  height: 150px;
-  background: #d3d3d3;
-}
-
 #boot {
   display: none;
   height: 100vh;

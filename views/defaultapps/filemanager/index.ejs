@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BikeFM</title>
+    <link rel="stylesheet" href="/css/bikefm/main.css">
+    <link rel="stylesheet" href="/css/ui/buttons.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <h5 class="sidebar_label">
+            <img src="/assets/icons/third-party/fast_access.svg" class="label_bigicon">
+            Fast access
+        </h5>
+        <p class="sidebar_item">
+            <img src="/assets/icons/third-party/download.svg" class="label_icon">
+            Downloads
+        </p>
+        <p class="sidebar_item">
+            <img src="/assets/icons/third-party/documents_white.svg" class="label_icon">
+            Documents
+        </p>
+        <p class="sidebar_item">
+            <img src="/assets/icons/third-party/homedir.svg" class="label_icon">
+            <%= uname %>'s folder
+        </p>
+    </div>
+    <main>
+        <header>
+            <input type="text" id="path" value="<%= homedir %>" autocomplete="off">
+            <div class="header_btns">
+                <button class="btn-blue" id="header_addbtn">Add...</button>
+                <button id="header_refreshbtn">Refresh dir...</button>
+            </div>
+        </header>
+        <div class="contentsInfo">
+            <span class="contentsInfo_item item_name">Name</span>
+            <span class="contentsInfo_item">Changed</span>
+            <span class="contentsInfo_item">Type, ext.</span>
+        </div>
+        <div class="contents">
+            <ul id="contents_files">
+
+            </ul>
+        </div>
+    </main>
+    <script src="/js/bikefm/main.js"></script>
+</body>
+
+</html>

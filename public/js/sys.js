@@ -2,7 +2,6 @@
  * @name molix
  * @description Molix client-side file
  */
-'use strict';
 
 const molix = {
   reportError() {
@@ -14,7 +13,8 @@ const molix = {
     }, 4000);
   },
   scrwidth: window.innerWidth,
-  scrheight: window.innerHeight
+  scrheight: window.innerHeight,
+  totalModules: 0
 };
 
 function $(method, element) {

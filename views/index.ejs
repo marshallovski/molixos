@@ -10,9 +10,29 @@
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/fonts.css">
   <link rel="stylesheet" href="/css/ui/window.css">
+  <link rel="stylesheet" href="/css/ui/buttons.css">
   <link rel="stylesheet" href="/css/ui/actionpanel.css">
   <link rel="stylesheet" href="/css/ui/colors.css">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    body {
+      background-color: #1ab799;
+      color: #333;
+    }
+
+    #molix {
+      user-select: none;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      cursor: default;
+    }
+
     @font-face {
       font-family: 'Noto Sans Mono';
       src: url('/assets/fonts/NotoSansMono-Regular.ttf');
@@ -61,6 +81,7 @@
       if (!preloadImages.list) {
         preloadImages.list = [];
       }
+
       let list = preloadImages.list;
       for (let i = 0; i < array.length; i++) {
         let img = new Image();
@@ -75,16 +96,44 @@
       }
     }
 
-    preloadImages(["/assets/icons/errorIcon.png", "/assets/icons/infoIcon.png", "/assets/boot-logo.png"]);
+    preloadImages([
+      "/assets/icons/third-party/restart.svg",
+      "/assets/icons/third-party/settings.svg",
+      "/assets/icons/third-party/documents.svg",
+      "/assets/icons/third-party/settings_power.svg",
+      "/assets/icons/hiplayIcon.jpg",
+      "/assets/icons/third-party/poweroff.svg",
+      "/assets/icons/bikefmIcon.png",
+      "/assets/icons/errorIcon.png",
+      "/assets/icons/infoIcon.png",
+      "/assets/boot-logo.png",
+      "/assets/icons/eventjournalIcon.png"
+    ]);
   </script>
 </head>
 
 <body>
   <script>
+    window.onload = function () {
+      winmngr.createWindow({
+        title: 'Molix GUI components test',
+        content: molix.strings.componentTest,
+        icon: '/assets/icons/infoIcon.png',
+        classes: 'txt-yl',
+        height: 310
+      });
+
+      winmngr.createWindow({
+        title: 'Molix event journal',
+        content: molix.logging.eventJournal,
+        icon: '/assets/icons/eventjournalIcon.png'
+      });
+    }
+
     document.addEventListener('error', async (msg, url, lineNo, columnNo, error) => {
       molix.logging.lastError = 'MOLIX_scriptcrash';
       molix.logging.lastErrorDetails = error;
-      winmngr.createErrorWindow({
+      await winmngr.createErrorWindow({
         title: `<span class="error">${molix.logging.lastError}</span>`,
         content: `Some script in Molix is crashed with error.<br>Last error: ${molix.logging.lastError} ${error}<br>${url}<br>line:column - ${lineNo}:${columnNo}`,
         id: winmngr.randomPID(),
@@ -96,9 +145,28 @@
   <div id="boot"></div>
   <div id="molix">
     <div id="menu">
+      <div class="actionpanel_menu_item_default" onclick="
+        winmngr.createWindow({title: 'BikeFM', content: molix.strings.bikefm, icon: '/assets/icons/bikefmIcon.png', height: 480, width: 640});
+        ">
+        <img src="/assets/icons/bikefmIcon.png" alt="BikeFM" class="actionpanel_menu_itemIcon">
+        <span class="actionpanel_menu_itemText">BikeFM</span>
+      </div>
+      <div class="actionpanel_menu_item_default">
+        <img src="/assets/icons/hiplayIcon.jpg" alt="Hiplay" class="actionpanel_menu_itemIcon">
+        <span class="actionpanel_menu_itemText">Hiplay</span>
+      </div>
+      <hr class="actionpanel_menu_divider">
       <div class="actionpanel_menu_item">
-        <img src="/assets/boot-logo.png" class="actionpanel_menu_itemIcon">
-        molix
+        <img src="/assets/icons/eventjournalIcon.png" class="actionpanel_menu_itemIcon">
+        <span class="actionpanel_menu_itemText">molix event journal</span>
+      </div>
+      <div class="menu_controls">
+        <img src="/assets/icons/third-party/settings_power.svg" alt="Power settings"
+          class="menu_powerstbtn menu_pwrtbtn" onclick="$('cl', '.menu_powercontrols').style.display = 'block';">
+        <br>
+        <img src="/assets/icons/third-party/documents.svg" alt="Docs" class="menu_powerstbtn">
+        <br>
+        <img src="/assets/icons/third-party/settings.svg" alt="Settings" class="menu_powerstbtn">
       </div>
     </div>
     <div class="actionpanel">
@@ -107,33 +175,24 @@
       </div>
       <span class="actionpanel_calendar">01/01/2022<br>00:00:00</span>
     </div>
+    <div class="menu_powercontrols">
+      <h3 class="menu_powercontrols_heading">
+        Power controls
+        <span class="powercontrols_close" id="powercontrols_closebtn">&times;</span>
+      </h3>
+      <img src="/assets/icons/third-party/poweroff.svg" alt="Power Off" class="powercontrols_powerbtn"
+        onclick="fetch('/api/poweroff');">
+      <p class="menu_powercontrols_sub">Power Off</p>
+      <br>
+      <img src="/assets/icons/third-party/restart.svg" alt="Restart" class="powercontrols_restartbtn"
+        onclick="fetch('/api/exec/shutdown&/r');">
+      <p class="menu_powercontrols_sub">Restart</p>
+    </div>
   </div>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      font-family: 'DejaVu Sans', sans-serif;
-    }
-
-    body {
-      background-color: #1ab799;
-      color: #333;
-      font-family: 'DejaVu Sans', sans-serif;
-    }
-
-    #molix {
-      font-family: 'DejaVu Sans', sans-serif;
-      user-select: none;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      cursor: default;
-    }
-  </style>
   <script src="/js/sys.js"></script>
   <script src="/js/modules/log.js"></script>
-  <script src="/js/other/strings.js"></script>
-  <script src="/js/ui/panel.js"></script>
+  <script src="/js/modules/other/strings.js"></script>
+  <script src="/js/modules/ui/panel.js"></script>
   <!--  <script src="/js/utils/hardwareInfo.js"></script> -->
   <script src="/js/modules/winmngr.js"></script>
 </body>
