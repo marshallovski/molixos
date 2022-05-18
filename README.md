@@ -1,6 +1,6 @@
 # Molix
 <h3> A lightweight web-powered OS </h3>
-Current version: <strong>hotfix_4757-dev</strong> (see <a href="#changes-in-latest-release">changes</a> in this release)
+Current version: <strong>4758-dev</strong> (see <a href="#changes-in-latest-release">changes</a> in this release)
 <hr>
 
 # Browsers support:
@@ -35,28 +35,34 @@ Soon
 
 # Changes in latest release:
 <ul>
-	<li>Some changes with <code>molix.reportError()</code></li>
-	<li>Improved error catcher</li>
-	<li>Removed some old things from molix object</li>
- 	<li>Now <code>winmngr</code> uses <code>document.createElement</code> instead of <code>innerHTML +=</code></li>
-	<li>Some changes in <code>winmngr</code></li>
-	<li>Closing windows is complete</li>
-	<li>Change in windows - now max. window size is 1280x800px</li>
-	<li>Work at winimizing and restoring windows is complete</li>
-	<li>Work at action panel is complete</li>
-	<li>Added app tabs</li>
-	<li>Now action panel is 50% transparent</li>
-	<li>Fixed minimizing windows</li>
-	<li>Work at start menu is started</li>
-	<li>There is some plans for Molix goods</li>
-	<li>Code improvements by eslint</li>
-	<li>Restoring windows is working now</li>
-	<li> Created /misc API endpoint for other information (like tmpdir, userinfo, etc.)</li>
-	<br>
-	<strong><code>hotfix_4757-dev</code> Hotfix changes:</strong>
-	<li>Fixed issue https://github.com/marshallovski/molixos/issues/7</li>
-	<li>Fixed issue https://github.com/marshallovski/molixos/issues/6</li>
-	<li> Removed <code>winid</code> property from <code>winmngr</code></li>
+	08.05.2022:
+1. Start menu is now beautiful and work
+2. GUI components are complete (like button, dialogbox, progress, etc.)
+3. Now you can exec by websocket (ws://localhost:7070)
+4. Fixed restoring windows critical error
+5. Created event journal icon
+6. Created file manager (BikeFM) icon
+
+12.05.2022:
+1. Added blue button
+2. Fixed Power Settings menu
+3. Now buttons in Power Settings menu have colored background on hover
+
+13.05.2022:
+1. Now window content is always centered
+
+14.05.2022: 
+1. Now default OS font is Open Sans (excluding window title, it's uses DejaVu Sans)
+2. Started work at BikeFM (Molix's default file manager)
+3. Started work at Hiplay (Molix's default music player)
+4. Added Hiplay music player icon
+5. Added Hiplay music player item in start menu
+6. Updated installation help in github readme
+7. Updated "Features" in github repo
+8. Update screenshot in github readme
+
+15.05.2022:
+1. Created API endpoint for rebooting and power off
 </ul>
 
 # Current work:
