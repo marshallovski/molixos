@@ -35,12 +35,18 @@ Soon
 
 # Changes in latest release:
 <ul>
-	08.05.2022:
+08.05.2022:
+	<br>
 1. Start menu is now beautiful and work
+	<br>
 2. GUI components are complete (like button, dialogbox, progress, etc.)
+	<br>
 3. Now you can exec by websocket (ws://localhost:7070)
+	<br>
 4. Fixed restoring windows critical error
+	<br>
 5. Created event journal icon
+	<br>
 6. Created file manager (BikeFM) icon
 
 12.05.2022:
