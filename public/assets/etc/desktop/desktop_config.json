@@ -1,0 +1,6 @@
+{
+    "_bgtip": "supports image (url('path/to/image.jpg')) and color (#000 or gray)",
+    "desktopbg": "url('/assets/wallpapers/nature/wallp14.jpg')",
+    "_onlyeng": "only english are supported now",
+    "desktoplang": "en"
+}

@@ -8,6 +8,7 @@
 	border-top: 1px solid #fff;
 	z-index: 1000;
 	max-height: 40px;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .actionpanel_calendar {
@@ -15,6 +16,7 @@
 	font-size: 12px;
 	margin-right: 1em;
 	text-align: center;
+
 }
 
 .actionpanel_menu_item {
@@ -85,6 +87,7 @@
 	border: 1px solid #000;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .actionpanel_apptab {
@@ -100,13 +103,14 @@
 	width: 25px;
 	float: left;
 	margin: 5px;
+	vertical-align: 50%;
 }
 
 .apptab_appname {
 	margin-right: 3px;
 	line-height: 0;
 	margin-bottom: 0;
-	vertical-align: 50%;
+	vertical-align: sub;
 	font-size: 10px;
 }
 
@@ -139,6 +143,7 @@
 	filter: drop-shadow(0 0 80px #eee);
 	display: none;
 	z-index: 1000;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .menu_powercontrols_heading {
@@ -189,4 +194,3 @@
 .menu_pwrtbtn:hover {
 	background-color: #e14c08;
 }
-

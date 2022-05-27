@@ -1,7 +1,7 @@
-const fastify = require('fastify')({ logger: false })
-const path = require('path')
+const fastify = require('fastify')({ logger: false });
+const path = require('path');
 
-const port = 3030
+const port = 3030;
 
 fastify.register(require('point-of-view'), {
   engine: {
@@ -24,13 +24,21 @@ fastify.register(require('./routes/os.js'), { prefix: '/' })
 // filemanager
 fastify.register(require('./routes/bikefm.js'), { prefix: '/apps' })
 
+// music player
+fastify.register(require('./routes/hiplay.js'), { prefix: '/apps' })
+
+// settings (control panel)
+fastify.register(require('./routes/settings.js'), { prefix: '/apps' })
+
+
+
 const start = async () => {
   try {
-    await fastify.listen(port)
-    console.log(`Molix is running on ${fastify.server.address().port}.`)
+    await fastify.listen(port);
+    console.log(`Molix is running on ${fastify.server.address().address}:${fastify.server.address().port}.`);
   } catch (err) {
-    fastify.log.error(err)
-    process.exit(1)
+    fastify.log.error(err);
+    process.exit(1);
   }
 }
 

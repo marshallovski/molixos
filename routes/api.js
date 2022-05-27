@@ -34,7 +34,7 @@ async function hw(fastify, options) {
     sec = sec % 60;
 
     return {
-      version: '4758-dev',
+      version: '4759-dev',
       hostname: os.hostname(),
       tmpdir: os.tmpdir(),
       nodever: process.version,
@@ -55,7 +55,7 @@ async function hw(fastify, options) {
     switch (deviceOS) {
       case 'win32':
       case 'cygwin':
-        shutdownMsg = 'shutdown /r';
+        shutdownMsg = 'shutdown -r';
         break;
       case 'android':
       case 'linux':

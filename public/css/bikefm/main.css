@@ -1,13 +1,6 @@
 @font-face {
-    font-family: 'DejaVu Sans';
-    src: url('/assets/fonts/DejaVuSans.ttf');
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: 'Noto Mono';
-    src: url('/assets/fonts/NotoSansMono-Regular.ttf');
+    font-family: 'Noto Sans';
+    src: url('/assets/fonts/NotoSans-Regular.ttf');
     font-style: normal;
     font-weight: normal;
 }
@@ -18,9 +11,9 @@
     --sidebarclr: #fff;
     --sidebar_bookmark-hoverbg: rgba(85, 146, 223, 0.4);
     --sidebar_width: 160px;
-    --sidebar-font: 'DejaVu Sans', sans-serif;
+    --sidebar-font: 'Noto Sans', sans-serif;
 
-    --main-font: 'DejaVu Sans', sans-serif;
+    --main-font: 'Noto Sans', sans-serif;
     --mainbg: #424242;
     --mainclr: #fff;
     --main-borderclr: #fff;
@@ -39,6 +32,11 @@
     padding: 0;
 }
 
+html,
+body {
+    overflow-y: hidden;
+}
+
 body {
     background-color: var(--mainbg);
     color: var(--mainclr);
@@ -48,9 +46,7 @@ body {
 main {
     margin-left: 160px;
     padding: 10px;
-    border: 1px solid var(--main-borderclr);
     border-radius: 5px;
-    overflow: hidden;
 }
 
 button,
@@ -87,17 +83,6 @@ header {
     margin-right: 1em;
 }
 
-.contentsInfo {
-    background-color: var(--contentsinfobg);
-    padding: 8px;
-    color: #494949;
-    position: sticky;
-    text-align: center;
-    margin-top: 5px;
-    border: 1px solid #bdbdbd;
-    border-radius: 3px;
-}
-
 .contentsInfo_item {
     font-weight: bold;
     background-color: #f1f1f1;
@@ -112,7 +97,7 @@ header {
     background-color: var(--namepropsbg);
     color: #222;
     padding: 4px;
-    width: 350px;
+    width: 210px;
     border: 1.5px solid var(--namepropsborderclr);
     text-align: left;
 }
@@ -157,6 +142,7 @@ header {
     border-radius: 3px;
     transition: background, padding 300ms;
     text-align: var(--sidebar_bookmark-align);
+    margin-top: 1em;
 }
 
 .sidebar_item:hover {
@@ -165,9 +151,67 @@ header {
 }
 
 .filelabel {
-    list-style-type: none;
+    overflow: hidden;
+    text-rendering: optimizeLegibility;
+    user-select: none;
+    transition: background-color 300ms;
+    width: fit-content;
+    max-width: 230px;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.filelabel:hover {
+    background: rgba(154, 182, 210, 0.3);
 }
 
 .contents {
-    overflow: visible;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 350px;
+    width: 100%;
+    scrollbar-width: thin;
+}
+
+.labeltype {
+    margin-left: 1em;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    text-align: left;
+    padding: 8px;
+    font-size: 12px;
+}
+
+table.contentstable {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+}
+
+table.contentstable td,
+table.contentstable th {
+    padding-left: 1em;
+}
+
+td {
+    word-break: break-all;
+}
+
+@media only screen and (max-width: 800px) {
+    .sidebar {
+        display: none;
+    }
+    
+    body,
+    main {
+        margin: 0;
+        width: auto;
+    }
 }

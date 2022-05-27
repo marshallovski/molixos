@@ -1,0 +1,28 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="128" height="128" fill="#DBDBDB"/>
+<g filter="url(#filter0_i_2_2)">
+<g clip-path="url(#clip0_2_2)">
+<path d="M99.7 68.7C99.9 67.2 100 65.65 100 64C100 62.4 99.9 60.8 99.65 59.3L109.8 51.4C110.7 50.7 110.95 49.35 110.4 48.35L100.8 31.75C100.2 30.65 98.95 30.3 97.85 30.65L85.9 35.45C83.4 33.55 80.75 31.95 77.8 30.75L76 18.05C75.8 16.85 74.8 16 73.6 16H54.4C53.2 16 52.25 16.85 52.05 18.05L50.25 30.75C47.3 31.95 44.6 33.6 42.15 35.45L30.2 30.65C29.1 30.25 27.85 30.65 27.25 31.75L17.7 48.35C17.1 49.4 17.3 50.7 18.3 51.4L28.45 59.3C28.2 60.8 28 62.45 28 64C28 65.55 28.1 67.2 28.35 68.7L18.2 76.6C17.3 77.3 17.05 78.65 17.6 79.65L27.2 96.25C27.8 97.35 29.05 97.7 30.15 97.35L42.1 92.55C44.6 94.45 47.25 96.05 50.2 97.25L52 109.95C52.25 111.15 53.2 112 54.4 112H73.6C74.8 112 75.8 111.15 75.95 109.95L77.75 97.25C80.7 96.05 83.4 94.45 85.85 92.55L97.8 97.35C98.9 97.75 100.15 97.35 100.75 96.25L110.35 79.65C110.95 78.55 110.7 77.3 109.75 76.6L99.7 68.7ZM64 82C54.1 82 46 73.9 46 64C46 54.1 54.1 46 64 46C73.9 46 82 54.1 82 64C82 73.9 73.9 82 64 82Z" fill="url(#paint0_linear_2_2)"/>
+</g>
+<rect x="4" y="4" width="120" height="120" rx="5" stroke="#333333" stroke-width="0.5"/>
+</g>
+<defs>
+<filter id="filter0_i_2_2" x="3.75" y="3.75" width="120.5" height="124.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.2 0 0 0 0 0.2 0 0 0 0 0.2 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_2_2"/>
+</filter>
+<linearGradient id="paint0_linear_2_2" x1="64" y1="16" x2="64" y2="112" gradientUnits="userSpaceOnUse">
+<stop offset="0.9999" stop-color="#9227E7"/>
+<stop offset="1" stop-color="#333333" stop-opacity="0"/>
+</linearGradient>
+<clipPath id="clip0_2_2">
+<rect x="4" y="4" width="120" height="120" rx="5" fill="white"/>
+</clipPath>
+</defs>
+</svg>

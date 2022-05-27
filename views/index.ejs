@@ -8,6 +8,7 @@
   <title>Molix</title>
   <link rel="icon" href="/assets/boot-logo.png">
   <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/ui/desktop.css">
   <link rel="stylesheet" href="/css/fonts.css">
   <link rel="stylesheet" href="/css/ui/window.css">
   <link rel="stylesheet" href="/css/ui/buttons.css">
@@ -17,12 +18,21 @@
     * {
       margin: 0;
       padding: 0;
-      font-family: 'Open Sans', sans-serif;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
     }
 
     body {
-      background-color: #1ab799;
+      background: var(--defbg, #1ab799) no-repeat;
+      background-size: 100% 100%;
       color: #333;
+      font-family: 'Open Sans', sans-serif;
     }
 
     #molix {
@@ -31,6 +41,16 @@
       height: 100%;
       overflow: hidden;
       cursor: default;
+    }
+
+    #boot {
+      display: none;
+      height: 100vh;
+      width: 100%;
+      background-color: blue;
+      z-index: 9999999;
+      text-align: center;
+      font-family: 'DejaVu Sans Mono', monospace !important;
     }
 
     @font-face {
@@ -109,54 +129,53 @@
       "/assets/boot-logo.png",
       "/assets/icons/eventjournalIcon.png"
     ]);
+
+    for (let index = 1; index < 15; index++) {
+      preloadImages([`/assets/wallpapers/nature/wallp${index}.jpg`]);
+    }
   </script>
 </head>
 
 <body>
-  <script>
-    window.onload = function () {
-      winmngr.createWindow({
-        title: 'Molix GUI components test',
-        content: molix.strings.componentTest,
-        icon: '/assets/icons/infoIcon.png',
-        classes: 'txt-yl',
-        height: 310
-      });
-
-      winmngr.createWindow({
-        title: 'Molix event journal',
-        content: molix.logging.eventJournal,
-        icon: '/assets/icons/eventjournalIcon.png'
-      });
-    }
-
-    document.addEventListener('error', async (msg, url, lineNo, columnNo, error) => {
-      molix.logging.lastError = 'MOLIX_scriptcrash';
-      molix.logging.lastErrorDetails = error;
-      await winmngr.createErrorWindow({
-        title: `<span class="error">${molix.logging.lastError}</span>`,
-        content: `Some script in Molix is crashed with error.<br>Last error: ${molix.logging.lastError} ${error}<br>${url}<br>line:column - ${lineNo}:${columnNo}`,
-        id: winmngr.randomPID(),
-        classes: 'text-center',
-        after: molix.reportError()
-      });
-    });
-  </script>
   <div id="boot"></div>
   <div id="molix">
+    <script>
+      window.onload = function () {
+        winmngr.createWindow({
+          title: 'hello window',
+          content: 'hello from winmngr!',
+          icon: '/assets/icons/infoIcon.png',
+          pos: {
+            x: 300,
+            y: 100
+          }
+        });
+      }
+
+      window.onerror = async (msg, url, lineNo, columnNo, error) => {
+        logging.lastError = 'MOLIX_scriptcrash';
+        logging.lastErrorDetails = `<br>${error}<br>at <b>${url} - ${lineNo}:${columnNo}</b>`;
+        molix.reportError();
+      }
+    </script>
     <div id="menu">
       <div class="actionpanel_menu_item_default" onclick="
-        winmngr.createWindow({title: 'BikeFM', content: molix.strings.bikefm, icon: '/assets/icons/bikefmIcon.png', height: 480, width: 640});
+        winmngr.createWindow({title: 'BikeFM', content: molix.strings.bikefm, icon: '/assets/icons/bikefmIcon.png', height: 500, width: 835});
         ">
         <img src="/assets/icons/bikefmIcon.png" alt="BikeFM" class="actionpanel_menu_itemIcon">
         <span class="actionpanel_menu_itemText">BikeFM</span>
       </div>
-      <div class="actionpanel_menu_item_default">
-        <img src="/assets/icons/hiplayIcon.jpg" alt="Hiplay" class="actionpanel_menu_itemIcon">
-        <span class="actionpanel_menu_itemText">Hiplay</span>
+
+      <div class="actionpanel_menu_item_default" onclick="
+      winmngr.createWindow({title: 'Molix settings', content: molix.strings.settings, icon: '/assets/icons/molix_settingsIcon.svg', height: 480, width: 640, pos: { x: 350, y: 50 }});
+      ">
+        <img src="/assets/icons/molix_settings icon.svg" alt="Molix settings" class="actionpanel_menu_itemIcon">
+        <span class="actionpanel_menu_itemText">Molix settings</span>
       </div>
+
       <hr class="actionpanel_menu_divider">
-      <div class="actionpanel_menu_item">
+      <div class="actionpanel_menu_item"
+        onclick="winmngr.createWindow({title: 'Molix event journal', content: molix.strings.eventjournal, icon: '/assets/icons/eventjournalIcon.png'});">
         <img src="/assets/icons/eventjournalIcon.png" class="actionpanel_menu_itemIcon">
         <span class="actionpanel_menu_itemText">molix event journal</span>
       </div>
@@ -175,6 +194,9 @@
       </div>
       <span class="actionpanel_calendar">01/01/2022<br>00:00:00</span>
     </div>
+    <div class="desktop_contextmenu">
+
+    </div>
     <div class="menu_powercontrols">
       <h3 class="menu_powercontrols_heading">
         Power controls
@@ -185,7 +207,7 @@
       <p class="menu_powercontrols_sub">Power Off</p>
       <br>
       <img src="/assets/icons/third-party/restart.svg" alt="Restart" class="powercontrols_restartbtn"
-        onclick="fetch('/api/exec/shutdown&/r');">
+        onclick="fetch('/api/reboot');">
       <p class="menu_powercontrols_sub">Restart</p>
     </div>
   </div>
@@ -193,6 +215,7 @@
   <script src="/js/modules/log.js"></script>
   <script src="/js/modules/other/strings.js"></script>
   <script src="/js/modules/ui/panel.js"></script>
+  <script src="/js/modules/ui/desktop.js"></script>
   <!--  <script src="/js/utils/hardwareInfo.js"></script> -->
   <script src="/js/modules/winmngr.js"></script>
 </body>

@@ -1,0 +1,65 @@
+{
+    "bikefm": [
+        "<br>BikeFM",
+        "<br>Default file manager for Molix",
+        [
+            "<br>marshallovski"
+        ],
+        "<br>1.1<br>",
+        "/assets/icons/bikefmIcon.png"
+    ],
+    "hiplay": {
+        "name": "Hiplay",
+        "desc": "Music player for Molix",
+        "icon": "/assets/icons/hiplayIcon.jpg",
+        "devs": [
+            "marshallovski"
+        ],
+        "version": "1.2.0"
+    },
+    "eventjournal": {
+        "name": "eventjournal",
+        "desc": "Molix events journal app",
+        "icon": "/assets/icons/eventjournalIcon.png",
+        "devs": [
+            "marshallovski"
+        ],
+        "version": "1.0"
+    },
+    "actpanel": {
+        "name": "actpanel",
+        "desc": "Second thing that welcomes you after Molix's start",
+        "icon": "/assets/icons/actpanelIcon.png",
+        "devs": [
+            "marshallovski"
+        ],
+        "version": "6.0.0"
+    },
+    "winmngr": {
+        "name": "winmngr",
+        "desc": "Molix's initial window manager",
+        "icon": "/assets/icons/none.png",
+        "devs": [
+            "marshallovski"
+        ],
+        "version": "11.2.91"
+    },
+    "molixicons": {
+        "name": "Molix icons",
+        "desc": "Molix icons pack. Some from them are very ugly, because I'm not a designer...",
+        "icon": "/assets/icons/mliconpackIcon.svg",
+        "devs": [
+            "marshallovski"
+        ],
+        "version": "1.3"
+    },
+    "settingsapp": {
+        "name": "Settings app",
+        "desc": "(you just now see at settings app)",
+        "icon": "/assets/icons/molix_settingsIcon.svg",
+        "devs": [
+            "marshallovski"
+        ],
+        "version": "1.0"
+    }
+}

@@ -1,16 +1,17 @@
-/**
- * @name molix
- * @description Molix client-side file
- */
-
 const molix = {
   reportError() {
     $('id', 'molix').style.display = 'none';
     $('id', 'boot').style.display = 'block';
-    $('id', 'boot').innerHTML = `<span class="error">Error: ${molix.logging.lastError || 'not reported'}, error details: ${molix.logging.lastErrorDetails}<br>reboot in few seconds</span>`;
+    $('id', 'boot').innerHTML = `<br><img src="/assets/boot-logo.png" alt="error" style="width: 350px;"><br><p class="txt-white" style="width: 350px; display: block; margin: auto;">${logging.lastError || 'not reported'}<br>${logging.lastErrorDetails}<br><br><br>reboot in 5 seconds</p>`;
     setTimeout(() => {
       window.location.reload();
-    }, 4000);
+    }, 5000);
+  },
+  exec(cmd) {
+    let ws = new WebSocket('ws://localhost:7070');
+    ws.onopen = function () {
+      ws.send(cmd);
+    }
   },
   scrwidth: window.innerWidth,
   scrheight: window.innerHeight,

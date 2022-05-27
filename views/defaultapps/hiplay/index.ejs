@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="/css/hiplay/main.css">
+  <!-- <link rel="stylesheet" href="/css/hiplay/themes.css"> -->
+  <title><%= trackName %> - Hiplay</title>
+  <link rel="icon" href="/assets/hiplay/logo.jpg">
+  <meta name="description" content="<%= trackName %> by <%= trackAuthors %> | Hiplay Music Player">
+  <meta name="title" content="<%= trackName %>">
+</head>
+
+<body>
+  <main>
+    <!-- <header>
+      <span class="header_item">
+        Hiplay
+      </span>
+      <span class="header_item_right mi" id="settingsBtn">settings</span>
+      <span class="header_item_right mi" id="closeSettingsBtn">close</span>
+    </header> -->
+    <div id="playerMain">
+      <div class="player">
+        <br>
+        <img src="<%= trackCover %>" alt="cover image for <%= trackName %>" class="track-thumb_big"
+          onerror="this.src = '/assets/hiplay/logo.jpg';">
+        <div class="player_track-info">
+          <h1>
+            <%= trackName %>
+              <span class="likeBtn mi">favorite_border</span>
+          </h1>
+          <p class="player_track-author">
+            <%= trackAuthors %>
+          </p>
+        </div>
+        <br>
+        <div class="player_controls">
+          <progress value="0" step="1" min="0" max="100" id="timeslider"></progress>
+          <p>
+            <span id="controls_duration">
+              00:00 | 00:00
+            </span>
+          </p>
+          <button class="mi ctrlbtn" id="seekmin">
+            first_page
+          </button>
+          <button class="mi playbtn">
+            play_arrow
+          </button>
+          <button class="mi ctrlbtn" id="seekplus">
+            last_page
+          </button>
+        </div>
+        <button class="ctrlbtn rpbtn mi">repeat</button>
+      </div>
+    </div>
+    <div id="settingsMenu">
+      <h1>Settings</h1>
+      <label for="themeSwitch">Enable light theme: (fix's soon)</label>
+      <input type="checkbox" name="themeSwitch">
+    </div>
+  </main>
+  <script src="/js/hiplay/index.js"></script>
+  <!-- <script src="/js/hiplay/themeSwitch.js"></script> -->
+</body>
+
+</html>

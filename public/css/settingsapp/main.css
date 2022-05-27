@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('/assets/fonts/NotoSans-Regular.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #424242;
+    color: #fff;
+    font-family: 'Noto Sans';
+}
+
+main {
+    margin-left: 1em;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.title {
+    margin-left: 1em;
+    margin-top: 10px;
+    background-color: azure;
+    width: fit-content;
+    color: #424242;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.settingitem_icon {
+    vertical-align: middle;
+}
+
+.settingitem_itemname {
+    font-size: 12px;
+}
+
+.settingitem {
+    width: fit-content;
+    padding: 4px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.settingitem:hover {
+    background: rgba(0, 256, 256, 0.2);
+    font-weight: bold;
+    color: #eee;
+}
+
+.about {
+    display: none;
+    margin-left: 3em;
+}
+
+li {
+    list-style: none;
+}
+
+.dtsettings {
+    display: none;
+}
+
+.wallp {
+    width: 300px;
+}

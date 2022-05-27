@@ -1,0 +1,15 @@
+:root {
+    --bgblue: #906aaf;
+    --defbg: #1ab799;
+}
+
+.desktop_contextmenu {
+    z-index: 800;
+    position: fixed;
+    display: none;
+    width: 150px;
+    background-color: #333;
+    border: 1px solid gray;
+    padding: 16px;
+    border-radius: 8px;
+}

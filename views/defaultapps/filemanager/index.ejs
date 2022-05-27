@@ -24,9 +24,13 @@
             <img src="/assets/icons/third-party/documents_white.svg" class="label_icon">
             Documents
         </p>
-        <p class="sidebar_item">
+        <p class="sidebar_item" onclick="pathinput.value = '<%= homedir %>'; refreshDir();">
             <img src="/assets/icons/third-party/homedir.svg" class="label_icon">
             <%= uname %>'s folder
+        </p>
+        <p class="sidebar_item">
+            <img src="/assets/icons/third-party/disk_usage.svg" class="label_icon">
+            Disks usage
         </p>
     </div>
     <main>
@@ -37,17 +41,22 @@
                 <button id="header_refreshbtn">Refresh dir...</button>
             </div>
         </header>
-        <div class="contentsInfo">
-            <span class="contentsInfo_item item_name">Name</span>
-            <span class="contentsInfo_item">Changed</span>
-            <span class="contentsInfo_item">Type, ext.</span>
-        </div>
+        <br>
         <div class="contents">
-            <ul id="contents_files">
-
-            </ul>
+            <table class="contentstable">
+                <thead>
+                    <tr>
+                        <th><span class="contentsInfo_item item_name">Name</span></th>
+                        <th><span class="contentsInfo_item">Type</span></th>
+                        <th><span class="contentsInfo_item">Size</span></th>
+                    </tr>
+                </thead>
+                <tbody id="contents_files">
+                </tbody>
+            </table>
         </div>
     </main>
+    <script src="/js/sys.js"></script>
     <script src="/js/bikefm/main.js"></script>
 </body>
 
