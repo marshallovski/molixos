@@ -1,6 +1,6 @@
 # Molix
 <h3> A lightweight web-powered OS </h3>
-Current version: <strong>4758-dev</strong> (see <a href="#changes-in-latest-release">changes</a> in this release)
+Current version: <strong>4759-dev</strong> (see <a href="#changes-in-latest-release">changes</a> in this release)
 <hr>
 
 # Browsers support:
