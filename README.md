@@ -35,40 +35,62 @@ Soon
 
 # Changes in latest release:
 <ul>
-08.05.2022:
-	<br>
-1. Start menu is now beautiful and work
-	<br>
-2. GUI components are complete (like button, dialogbox, progress, etc.)
-	<br>
-3. Now you can exec by websocket (ws://localhost:7070)
-	<br>
-4. Fixed restoring windows critical error
-	<br>
-5. Created event journal icon
-	<br>
-6. Created file manager (BikeFM) icon
-
-12.05.2022:
-1. Added blue button
-2. Fixed Power Settings menu
-3. Now buttons in Power Settings menu have colored background on hover
-
-13.05.2022:
-1. Now window content is always centered
-
-14.05.2022: 
-1. Now default OS font is Open Sans (excluding window title, it's uses DejaVu Sans)
-2. Started work at BikeFM (Molix's default file manager)
-3. Started work at Hiplay (Molix's default music player)
-4. Added Hiplay music player icon
-5. Added Hiplay music player item in start menu
-6. Updated installation help in github readme
-7. Updated "Features" in github repo
-8. Update screenshot in github readme
-
-15.05.2022:
-1. Created API endpoint for rebooting and power off
+	<li>
+	BikeFM is now working
+	</li>
+	<li>
+	BikeFM now detects file format
+	</li>
+	
+	<li>
+	Now BikeFM uses Noto Sans as default font (instead of DejaVu Sans)
+	</li>
+	<li>
+	Now you can browse folders and open files in BikeFM
+	</li>
+	<li>
+	Added "Disks usage" bookmark at "Fast access" menu in BikeFM
+	</li>
+	<li>
+	Now BikeFM is adaptive (usable on mobile devices, tested on real smartphone)
+	</li>
+	
+	<li>
+		Making some adaptive layout for mobiles (in future, maybe I'm create Molix Mobile for mobile devices)
+	</li>
+	<li>
+		Window title is now some smaller
+	</li>
+	<li>
+		Fixed fallback fonts
+	</li>
+	<li>
+		Added custom position property in window creating (<code>winmngr.createWindow({ pos: { x: 100, y: 100 } })</code>)
+	</li>
+	<li>
+		Now error screen is more nice
+	</li>
+	<li>
+		Fixed rebooting
+	</li>
+	<li>
+		 Fixed poweroff
+	</li>
+	<li>
+		Added wallpapers
+	</li>
+	<li>
+		Now windows remember it's position and when you restoring window, it's set to it's last position
+	</li>
+	<li>
+		Now appname in actionpanel tab is horizontally centered
+	</li>
+	<li>
+		Hiplay: Fixed some bugs, fixed fonts and layout
+	</li>
+	<li>
+		Hiplay: Fixed "not found" error in frontend
+	</li>
 </ul>
 
 # Current work:
