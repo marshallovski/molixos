@@ -1,6 +1,6 @@
 'use strict';
 
-const winmngr = {
+window.winmngr = {
   randomPID() {
     const array = new Uint32Array(10);
     self.crypto.getRandomValues(array);
@@ -71,7 +71,6 @@ const winmngr = {
       panel.createTab(title, icon, id);
     }
 
-    console.log(this.windows);
     logging.log(`winmngr: created default window, ID: ${id}, window title: ${title || 'empty'}`)
   },
   async createErrorWindow({ title, content, id = this.randomPID(), after }) {

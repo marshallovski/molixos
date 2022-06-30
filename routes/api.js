@@ -2,6 +2,7 @@ const fastify = require('fastify')({ logger: false });
 const os = require('os');
 const fs = require('fs');
 const WebSocket = require('ws');
+const editJsonFile = require("edit-json-file");
 
 async function hw(fastify, options) {
   await fastify.get('/sys', async (request, reply) => {
@@ -34,7 +35,7 @@ async function hw(fastify, options) {
     sec = sec % 60;
 
     return {
-      version: '4759-dev',
+      version: '4760-dev',
       hostname: os.hostname(),
       tmpdir: os.tmpdir(),
       nodever: process.version,
@@ -47,6 +48,14 @@ async function hw(fastify, options) {
     return { content: fs.readdirSync(request.query.dir) }
   });
 
+  fastify.get('/changeWallpaper/:path', async (request, reply) => {
+    let file = editJsonFile(`./public/assets/etc/desktop/desktop_config.json`);
+    file.set("desktopbg", `url('${request.query.bg}')`);
+    file.save();
+    file = editJsonFile(`./public/assets/etc/desktop/desktop_config.json`, {
+      autosave: true
+    });
+  });
   fastify.get('/reboot', async () => {
     const ws = new WebSocket('ws://localhost:7070');
     const deviceOS = os.platform();

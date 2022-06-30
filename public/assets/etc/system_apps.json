@@ -1,13 +1,11 @@
 {
-    "bikefm": [
-        "<br>BikeFM",
-        "<br>Default file manager for Molix",
-        [
-            "<br>marshallovski"
-        ],
-        "<br>1.1<br>",
-        "/assets/icons/bikefmIcon.png"
-    ],
+    "bikefm": {
+        "name": "BikeFM",
+        "desc": "Default file manager for Molix",
+        "devs": ["marshallovski"],
+        "version": "1.1",
+        "icon": "/assets/icons/bikefmIcon.png"
+    },
     "hiplay": {
         "name": "Hiplay",
         "desc": "Music player for Molix",
@@ -38,15 +36,15 @@
     "winmngr": {
         "name": "winmngr",
         "desc": "Molix's initial window manager",
-        "icon": "/assets/icons/none.png",
+        "icon": "/assets/icons/infoIcon.png",
         "devs": [
             "marshallovski"
         ],
-        "version": "11.2.91"
+        "version": "11.2.92"
     },
     "molixicons": {
         "name": "Molix icons",
-        "desc": "Molix icons pack. Some from them are very ugly, because I'm not a designer...",
+        "desc": "Molix icons pack. Some from them are very ugly because I'm not a designer...",
         "icon": "/assets/icons/mliconpackIcon.svg",
         "devs": [
             "marshallovski"
@@ -55,11 +53,11 @@
     },
     "settingsapp": {
         "name": "Settings app",
-        "desc": "(you just now see at settings app)",
+        "desc": "(you just here now)",
         "icon": "/assets/icons/molix_settingsIcon.svg",
         "devs": [
             "marshallovski"
         ],
-        "version": "1.0"
+        "version": "1.2"
     }
 }
