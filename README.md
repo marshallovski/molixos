@@ -53,4 +53,4 @@ Soon
 # Screenshots
 <p>(all screenshots captured at Firefox 99.0.1 (64-bit) in Windows 10)</p>
 
-![image](https://user-images.githubusercontent.com/68496774/179363409-83e3c368-828a-4727-a945-819d23a98da1.png)
+![image](https://user-images.githubusercontent.com/68496774/179986304-1553ed3b-ac6e-4c9a-97e3-68b14b1366fd.png)
